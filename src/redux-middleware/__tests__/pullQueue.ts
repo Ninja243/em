@@ -3,9 +3,9 @@ import { HOME_PATH, HOME_TOKEN } from '../../constants'
 import { clear, existingThoughtChange, existingThoughtDelete, existingThoughtMove, importText, newThought, setCursor } from '../../action-creators'
 import { initialize } from '../../initialize'
 import { getAllChildren, getParent, rankThoughtsFirstMatch } from '../../selectors'
-import * as dexie from '../../data-providers/dexie'
+import * as dexie from '../../data-providers/detaDexie'
 import getContext from '../../data-providers/data-helpers/getContext'
-import { DataProvider } from '../../data-providers/DataProvider'
+import { DetaProvider } from '../../data-providers/DetaProvider'
 import { setCursorFirstMatchActionCreator } from '../../test-helpers/setCursorFirstMatch'
 import { SimplePath } from '../../types'
 import testTimer from '../../test-helpers/testTimer'
@@ -17,7 +17,7 @@ import testTimer from '../../test-helpers/testTimer'
 
 const fakeTimer = testTimer()
 
-const db = dexie as DataProvider
+const db = dexie as DetaProvider
 
 beforeEach(async () => {
   fakeTimer.useFakeTimer()

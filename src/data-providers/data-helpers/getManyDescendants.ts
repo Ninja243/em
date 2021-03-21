@@ -1,4 +1,4 @@
-import { DataProvider } from '../DataProvider'
+import { DetaProvider } from '../DetaProvider'
 import { hashContext, yieldAll } from '../../util'
 import { EM_TOKEN } from '../../constants'
 import getDescendantThoughts from './getDescendantThoughts'
@@ -11,7 +11,7 @@ const emContextEncoded = hashContext([EM_TOKEN])
  *
  * @param maxDepth    Maximum number of levels to fetch.
  */
-const getManyDescendants = async function* getManyDescendants(provider: DataProvider, contextMap: Index<Context>, { maxDepth = 100 } = {}): AsyncIterable<ThoughtsInterface> {
+const getManyDescendants = async function* getManyDescendants(provider: DetaProvider, contextMap: Index<Context>, { maxDepth = 100 } = {}): AsyncIterable<ThoughtsInterface> {
 
   // fetch descendant thoughts for each context in contextMap
   yield* yieldAll((Object.keys(contextMap) as ContextHash[]).map(key =>

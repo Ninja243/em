@@ -1,7 +1,7 @@
 import { Index, Lexeme, Parent } from '../types'
 
 /** A standard interface for data providers that can sync thoughts. See data-providers/README.md. */
-export interface DataProvider {
+export interface DetaProvider {
   clearAll: () => Promise<unknown>,
   getThoughtById: (id: string) => Promise<Lexeme | undefined>,
   getThoughtsByIds: (ids: string[]) => Promise<(Lexeme | undefined)[]>,

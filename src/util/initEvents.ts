@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import { Store } from 'redux'
 import { inputHandlers, isGestureHint } from '../shortcuts'
-import * as db from '../data-providers/dexie'
+import * as db from '../data-providers/detaDexie'
 import { clearSelection, isRoot, pathToContext } from '../util'
 import { State } from '../util/initialState'
 import { decodeThoughtsUrl, pathExists } from '../selectors'

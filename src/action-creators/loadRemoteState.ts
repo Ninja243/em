@@ -1,5 +1,5 @@
 import { decode as firebaseDecode } from 'firebase-encode'
-import * as db from '../data-providers/dexie'
+import * as db from '../data-providers/detaDexie'
 import { EMPTY_TOKEN, SCHEMA_HASHKEYS } from '../constants'
 import { isDocumentEditable, keyValueBy, logWithTime } from '../util'
 import { deleteData, updateThoughts } from '../action-creators'

@@ -3,7 +3,7 @@ import { ThunkMiddleware } from 'redux-thunk'
 import { HOME_PATH, HOME_TOKEN } from '../constants'
 import { equalArrays, hashContext, pathToContext } from '../util'
 import { decodeThoughtsUrl, hashContextUrl } from '../selectors'
-import { deleteCursor, updateCursor } from '../data-providers/dexie'
+import { deleteCursor, updateCursor } from '../data-providers/detaDexie'
 import { State } from '../util/initialState'
 import { Index } from '../types'
 

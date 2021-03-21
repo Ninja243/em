@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { EM_TOKEN } from '../../constants'
-import { DataProvider } from '../DataProvider'
+import { DetaProvider } from '../DetaProvider'
 import { hashContext, hashThought, head, isFunction, keyValueBy, never, unroot } from '../../util'
 import { Context, Index, Parent, ThoughtsInterface } from '../../types'
 
@@ -32,7 +32,7 @@ const isUnbuffered = (parent: Parent) =>
  * @param children
  * @param maxDepth    The maximum number of levels to traverse. When reached, adds pending: true to the returned Parent. Ignored for EM context. Default: 100.
  */
-async function* getDescendantThoughts(provider: DataProvider, context: Context, { maxDepth = MAX_DEPTH }: Options = {}): AsyncIterable<ThoughtsInterface> {
+async function* getDescendantThoughts(provider: DetaProvider, context: Context, { maxDepth = MAX_DEPTH }: Options = {}): AsyncIterable<ThoughtsInterface> {
 
   // use queue for breadth-first search
   let contexts = [context] // eslint-disable-line fp/no-let

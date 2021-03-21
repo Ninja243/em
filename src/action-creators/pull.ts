@@ -1,6 +1,6 @@
 import _ from 'lodash'
-import * as db from '../data-providers/dexie'
-import getFirebaseProvider from '../data-providers/firebase'
+import * as db from '../data-providers/detaDexie'
+import getFirebaseProvider from '../data-providers/detaFirebase'
 import getManyDescendants from '../data-providers/data-helpers/getManyDescendants'
 import { HOME_TOKEN } from '../constants'
 import { hashContext, mergeThoughts } from '../util'

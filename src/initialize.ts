@@ -1,5 +1,5 @@
 import './App.css'
-import initDB, * as db from './data-providers/dexie'
+import initDB, * as db from './data-providers/detaDexie'
 import { store } from './store'
 import { getContexts, getParent, getThought, getAllChildren, getChildrenRanked, isPending } from './selectors'
 import { State } from './util/initialState'

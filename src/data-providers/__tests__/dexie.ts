@@ -3,8 +3,8 @@ import { HOME_TOKEN } from '../../constants'
 import { initialize } from '../../initialize'
 import { getThought } from '../../selectors'
 import { clear, newThought } from '../../action-creators'
-import initDB, * as db from '../dexie'
-import dataProviderTest from '../../test-helpers/dataProviderTest'
+import initDB, * as db from '../detaDexie'
+import DetaProviderTest from '../../test-helpers/DetaProviderTest'
 import getContext from '../data-helpers/getContext'
 import dbGetThought from '../data-helpers/getThought'
 import testTimer from '../../test-helpers/testTimer'
@@ -19,7 +19,7 @@ const fakeTimer = testTimer()
 describe('dexie', () => {
   beforeEach(initDB)
   afterEach(db.clearAll)
-  dataProviderTest(db)
+  DetaProviderTest(db)
 })
 
 describe('integration', () => {

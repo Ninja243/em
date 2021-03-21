@@ -6,7 +6,7 @@ import getManyDescendants from '../data-providers/data-helpers/getManyDescendant
 import getContext from '../data-providers/data-helpers/getContext'
 import getThought from '../data-providers/data-helpers/getThought'
 import { equalArrays, hashContext, hashThought, isFunction, keyValueBy, mergeThoughts, never, reducerFlow, timestamp } from '../util'
-import { DataProvider } from '../data-providers/DataProvider'
+import { DetaProvider } from '../data-providers/DetaProvider'
 import { importText } from '../reducers'
 import { initialState } from '../util/initialState'
 import { Context, Parent } from '../types'
@@ -46,18 +46,18 @@ expect.extend({
         pass: false,
         message: () => `expected ${JSON.stringify(context1)} to be in ${formattedParents}`
       }
-      : index2 === -1 ? {
-        pass: false,
-        message: () => `expected ${JSON.stringify(context2)} to be in ${formattedParents}`
-      }
-      : index1 >= index2 ? {
-        pass: false,
-        message: () => `expected ${JSON.stringify(context1)} to appear before ${JSON.stringify(context2)} in ${formattedParents}`
-      }
-      : {
-        pass: true,
-        message: () => `expected ${JSON.stringify(context1)} to not appear before ${JSON.stringify(context2)} in ${formattedParents}`
-      }
+        : index2 === -1 ? {
+          pass: false,
+          message: () => `expected ${JSON.stringify(context2)} to be in ${formattedParents}`
+        }
+          : index1 >= index2 ? {
+            pass: false,
+            message: () => `expected ${JSON.stringify(context1)} to appear before ${JSON.stringify(context2)} in ${formattedParents}`
+          }
+            : {
+              pass: true,
+              message: () => `expected ${JSON.stringify(context1)} to not appear before ${JSON.stringify(context2)} in ${formattedParents}`
+            }
     )
   }
 })
@@ -72,7 +72,7 @@ const importThoughts = (text: string) => {
 }
 
 /** Runs tests for a module that conforms to the data-provider API. */
-const dataProviderTest = (provider: DataProvider) => {
+const DetaProviderTest = (provider: DetaProvider) => {
 
   test('getThoughtById', async () => {
 
@@ -739,4 +739,4 @@ const dataProviderTest = (provider: DataProvider) => {
 
 }
 
-export default dataProviderTest
+export default DetaProviderTest

@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { deleteThought, updateLastUpdated } from '../data-providers/dexie'
+import { deleteThought, updateLastUpdated } from '../data-providers/detaDexie'
 import { hashContext, hashThought, timestamp } from '../util'
 import { getThought, getAllChildren } from '../selectors'
 import { render } from '../reducers'

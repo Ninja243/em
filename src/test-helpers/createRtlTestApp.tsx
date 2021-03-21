@@ -6,7 +6,7 @@ import { render } from '@testing-library/react'
 import { initialize } from '../initialize'
 import { Provider } from 'react-redux'
 import { store } from '../store'
-import * as db from '../data-providers/dexie'
+import * as db from '../data-providers/detaDexie'
 import { clear } from '../action-creators'
 import { Await } from '../types'
 

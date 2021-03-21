@@ -1,4 +1,4 @@
-import { clearAll } from '../data-providers/dexie'
+import { clearAll } from '../data-providers/detaDexie'
 import { never } from '../util'
 import { clear, importText } from '../action-creators'
 import { EM_TOKEN, INITIAL_SETTINGS } from '../constants'

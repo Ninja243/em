@@ -1,7 +1,7 @@
 /* eslint-disable fp/no-mutating-methods */
 import _ from 'lodash'
-import * as db from '../data-providers/dexie'
-import getFirebaseProvider from '../data-providers/firebase'
+import * as db from '../data-providers/detaDexie'
+import getFirebaseProvider from '../data-providers/detaFirebase'
 import { clientId } from '../browser'
 import { EMPTY_TOKEN, EM_TOKEN } from '../constants'
 import { getSetting } from '../selectors'

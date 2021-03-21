@@ -1,4 +1,4 @@
-import * as db from '../data-providers/dexie'
+import * as db from '../data-providers/detaDexie'
 import getContext from '../data-providers/data-helpers/getContext'
 import { EM_TOKEN, INITIAL_SETTINGS } from '../constants'
 import { importText } from '../action-creators'
