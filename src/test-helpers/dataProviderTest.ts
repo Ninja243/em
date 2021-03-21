@@ -46,18 +46,18 @@ expect.extend({
         pass: false,
         message: () => `expected ${JSON.stringify(context1)} to be in ${formattedParents}`
       }
-        : index2 === -1 ? {
-          pass: false,
-          message: () => `expected ${JSON.stringify(context2)} to be in ${formattedParents}`
-        }
-          : index1 >= index2 ? {
-            pass: false,
-            message: () => `expected ${JSON.stringify(context1)} to appear before ${JSON.stringify(context2)} in ${formattedParents}`
-          }
-            : {
-              pass: true,
-              message: () => `expected ${JSON.stringify(context1)} to not appear before ${JSON.stringify(context2)} in ${formattedParents}`
-            }
+      : index2 === -1 ? {
+        pass: false,
+        message: () => `expected ${JSON.stringify(context2)} to be in ${formattedParents}`
+      }
+      : index1 >= index2 ? {
+        pass: false,
+        message: () => `expected ${JSON.stringify(context1)} to appear before ${JSON.stringify(context2)} in ${formattedParents}`
+      }
+      : {
+        pass: true,
+        message: () => `expected ${JSON.stringify(context1)} to not appear before ${JSON.stringify(context2)} in ${formattedParents}`
+      }
     )
   }
 })
