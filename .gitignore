@@ -25,3 +25,4 @@ yarn-error.log*
 
 # Keys to the db
 src/keys/.keys.ts
+em/
